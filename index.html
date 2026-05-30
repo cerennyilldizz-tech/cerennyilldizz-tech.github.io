@@ -1,43 +1,42 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mermer Tasarım Portalı</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MermerPark</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
-        <h1>MermerPark</h1>
+        <h1><a href="./">MermerPark</a></h1>
         <p>Özel mermer ürünler, doğrudan üreticiden.</p>
       </div>
       <nav class="nav-links">
         <a href="#urunler">Ürünler</a>
         <a href="#hakkimizda">Hakkımızda</a>
         <a href="#iletisim">İletişim</a>
+        <a href="cart.html">Sepet</a>
       </nav>
     </div>
   </header>
 
   <section class="hero">
-  <div class="container hero-content">
-    <div class="hero-copy">
-      <span class="eyebrow">Mermerde kalite</span>
-      <h2>Modern mermer çözümlerle mekanınızı güçlendirin</h2>
-      <p>Çeşitli mermer türleri, masa, tezgah, karo ve özel tasarım ürünler.</p>
-      <a class="button" href="#urunler">Katalogu Gör</a>
-    </div>
-    <div class="hero-image" style="background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80');">
-      <div class="hero-overlay">
-        <div>
+    <div class="container hero-content">
+      <div class="hero-copy">
+        <span class="eyebrow">Mermerde kalite</span>
+        <h2>Modern mermer çözümlerle mekanınızı güçlendirin</h2>
+        <p>Çeşitli mermer türleri, masa, tezgah, karo ve küçük tasarım ürünleri.</p>
+        <a class="button" href="#urunler">Katalogu Gör</a>
+      </div>
+      <div class="hero-image" style="background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1400&q=80');">
+        <div class="hero-overlay">
           <p>Doğal taşın en zarif haliyle projelerinize değer katın.</p>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <section id="urunler" class="products-section">
     <div class="container section-header">
@@ -45,113 +44,36 @@
       <p>Müşterilerinize sunabileceğiniz mermer modelleri.</p>
     </div>
 
-    <div class="product-grid">
-      <article class="product-card">
-        <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=800&q=80" alt="Mermer tezgah" />
-        <div class="product-info">
-          <h4>Bianco Carrara Tezgah</h4>
-          <p>Parlak yüzey, modern mutfak tasarımı için ideal.</p>
-          <span>Malzeme: Carrara</span>
-          <span>Boyut: 180x60 cm</span>
-          <button class="contact-button" data-product="Bianco Carrara Tezgah">Teklif Al</button>
-        </div>
-      </article>
-
-      <article class="product-card">
-        <img src="https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=800&q=80" alt="Mermer karo" />
-        <div class="product-info">
-          <h4>Venato Gri Karo</h4>
-          <p>Duvar ve zemin uygulamaları için şık seçim.</p>
-          <span>Malzeme: Venato</span>
-          <span>Boyut: 60x60 cm</span>
-          <button class="contact-button" data-product="Venato Gri Karo">Teklif Al</button>
-        </div>
-      </article>
-
-      <article class="product-card">
-        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Mermer masa" />
-        <div class="product-info">
-          <h4>Kristal Beyaz Masa</h4>
-          <p>Salon veya ofis için zarif mermer masa.</p>
-          <span>Malzeme: Beyaz Kristal</span>
-          <span>Boyut: 140x90 cm</span>
-          <button class="contact-button" data-product="Kristal Beyaz Masa">Teklif Al</button>
-        </div>
-      </article>
+    <div class="container">
+      <div id="productGrid" class="product-grid"></div>
     </div>
   </section>
-<article class="product-card">
-  <img loading="lazy" src="https://source.unsplash.com/800x600/?marble,tray" alt="Mermer Sunum Tepsisi" />
-  <div class="product-info">
-    <h4>Mermer Sunum Tepsisi</h4>
-    <p>El yapımı küçük sunum tepsisi — kahve, atıştırmalıklar için ideal.</p>
-    <span>Malzeme: Mermer</span>
-    <span>Boyut: 30x20 cm</span>
-    <button class="contact-button" data-product="Mermer Sunum Tepsisi">Teklif Al</button>
-  </div>
-</article>
 
-<article class="product-card">
-  <img loading="lazy" src="https://source.unsplash.com/800x600/?soap,dish,marble" alt="Mermer Sabunluk" />
-  <div class="product-info">
-    <h4>Mermer Sabunluk</h4>
-    <p>Minimal tasarımlı sabunluk — banyo ve lavabo için şık bir dokunuş.</p>
-    <span>Malzeme: Mermer</span>
-    <span>Boyut: 12x8 cm</span>
-    <button class="contact-button" data-product="Mermer Sabunluk">Teklif Al</button>
-  </div>
-</article>
-
-<article class="product-card">
-  <img loading="lazy" src="https://source.unsplash.com/800x600/?decorative,marble,plate" alt="Küçük Dekoratif Tepsi" />
-  <div class="product-info">
-    <h4>Küçük Dekoratif Tepsi</h4>
-    <p>Takı, anahtar veya küçük objeler için dekoratif tepsi.</p>
-    <span>Malzeme: Mermer</span>
-    <span>Boyut: 18x12 cm</span>
-    <button class="contact-button" data-product="Küçük Dekoratif Tepsi">Teklif Al</button>
-  </div>
-</article>
-  
   <section id="hakkimizda" class="about-section">
     <div class="container">
       <h3>Mermer sektöründe güven</h3>
-      <p>Uzman kadromuzla özel projelerde kaliteli mermer üretimi sunuyoruz. Ürünlerinizi hızlı ve şeffaf şekilde hazırlıyoruz.</p>
-      <div class="about-cards">
-        <div class="about-card">
-          <h4>Geniş ürün portföyü</h4>
-          <p>Tezgah, karo, mermer masa ve özel mimari uygulamalar.</p>
-        </div>
-        <div class="about-card">
-          <h4>Doğrudan üretim</h4>
-          <p>Tedarik zincirimizi kısaltarak fiyat ve kalite avantajı sağlıyoruz.</p>
-        </div>
-      </div>
+      <p>Uzman kadromuzla özel projelerde kaliteli mermer üretimi sunuyoruz.</p>
     </div>
   </section>
 
   <section id="iletisim" class="contact-section">
     <div class="container section-header">
       <h3>Teklif almak için iletişime geç</h3>
-      <p>Ürün ve proje detaylarını gönder, sana en kısa sürede dönüş yapalım.</p>
+      <p>Ürün ve proje detaylarını gönder, en kısa sürede dönüş yapalım.</p>
     </div>
     <div class="container contact-grid">
       <form id="contactForm" class="contact-form">
-        <label>
-          Adın Soyadın
+        <label>Adın Soyadın
           <input type="text" name="name" required />
         </label>
-        <label>
-          E-posta
+        <label>E-posta
           <input type="email" name="email" required />
         </label>
-        <label>
-          Telefon
+        <label>Telefon
           <input type="tel" name="phone" />
         </label>
-        <label>
-          Ürün / Talep
-          <textarea name="message" rows="5" placeholder="Hangi ürünle ilgileniyorsun?"></textarea>
+        <label>Ürün / Talep
+          <textarea name="message" rows="4" placeholder="Hangi ürünle ilgileniyorsun?"></textarea>
         </label>
         <button type="submit" class="button">Gönder</button>
         <p id="formMessage" class="form-message"></p>
@@ -173,5 +95,6 @@
   </footer>
 
   <script src="scripts.js"></script>
+  <noscript>JavaScript etkin değil: ürün listesi görünmeyecektir.</noscript>
 </body>
 </html>
