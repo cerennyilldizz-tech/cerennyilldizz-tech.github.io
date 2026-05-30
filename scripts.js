@@ -25,3 +25,17 @@ form.addEventListener("submit", (event) => \{\
   formMessage.style.color = "#3a5b2a";\
   form.reset();\
 \});}
+document.querySelectorAll('.add-cart-btn').forEach(b => {
+  b.addEventListener('click', () => {
+    const id = b.dataset.id;
+    const cart = JSON.parse(localStorage.getItem('mp_cart')||'[]');
+    const existing = cart.find(i=>i.id===id);
+    if (existing) existing.qty += 1; else {
+      const products = window._products || [];
+      const p = products.find(x=>x.id===id);
+      if (p) cart.push({id:p.id,title:p.title,image:p.image,price:p.price,qty:1});
+    }
+    localStorage.setItem('mp_cart', JSON.stringify(cart));
+    alert('Sepete eklendi');
+  });
+});
