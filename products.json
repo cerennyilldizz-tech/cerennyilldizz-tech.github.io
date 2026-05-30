@@ -54,3 +54,6 @@
     "price": "相談"
   }
 ]
+<script>
+fetch('products.json').then(r=>r.json()).then(d=>window._products=d);
+</script>
