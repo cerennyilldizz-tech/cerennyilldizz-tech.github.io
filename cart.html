@@ -45,10 +45,8 @@
         localStorage.setItem('mp_cart', JSON.stringify(c)); renderCart();
       }));
       document.querySelectorAll('.qty').forEach(inp => inp.addEventListener('change', e => {
-        const id = e.currentTarget.dataset.id;
-        const v = parseInt(e.currentTarget.value) || 1;
-        const c = JSON.parse(localStorage.getItem('mp_cart') || '[]');
-        const it = c.find(i => i.id === id); if (it) it.qty = v;
+        const id = e.currentTarget.dataset.id; const v = parseInt(e.currentTarget.value) || 1;
+        const c = JSON.parse(localStorage.getItem('mp_cart') || '[]'); const it = c.find(i => i.id === id); if (it) it.qty = v;
         localStorage.setItem('mp_cart', JSON.stringify(c)); renderCart();
       }));
     }
