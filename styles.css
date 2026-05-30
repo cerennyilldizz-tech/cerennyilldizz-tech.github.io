@@ -97,3 +97,51 @@ body{
 
 /* Accessibility: focus styles */
 a:focus,button:focus{outline:3px solid rgba(140,117,100,0.18);outline-offset:2px}
+.hero {
+  padding: 3.5rem 0;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.hero-copy h2 {
+  margin: 0;
+  font-size: clamp(1.9rem, 4vw, 3.1rem);
+  line-height: 1.05;
+}
+
+.hero-copy p {
+  color: var(--muted);
+  margin: 1rem 0 1.5rem;
+  max-width: 44rem;
+}
+
+.hero-image {
+  position: relative;
+  min-height: 360px;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 30px 70px rgba(0,0,0,0.14);
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.28));
+  display: flex;
+  align-items: flex-end;
+  padding: 2rem;
+  color: #fff;
+}
+
+.hero-overlay p {
+  margin: 0;
+  font-size: 1rem;
+  max-width: 22rem;
+}
