@@ -6,7 +6,7 @@
     "short": "Parlak yüzey, modern mutfak tasarımı için ideal.",
     "material": "Carrara",
     "size": "180x60 cm",
-    "price": "相談" 
+    "price": "Fiyat için iletişime geçin"
   },
   {
     "id": "venato-gri-karo",
@@ -15,7 +15,7 @@
     "short": "Duvar ve zemin uygulamaları için şık seçim.",
     "material": "Venato",
     "size": "60x60 cm",
-    "price": "相談"
+    "price": "Fiyat için iletişime geçin"
   },
   {
     "id": "kristal-beyaz-masa",
@@ -24,36 +24,33 @@
     "short": "Salon veya ofis için zarif mermer masa.",
     "material": "Beyaz Kristal",
     "size": "140x90 cm",
-    "price": "相談"
+    "price": "Fiyat için iletişime geçin"
   },
   {
     "id": "mermer-sunum-tepsisi",
     "title": "Mermer Sunum Tepsisi",
     "image": "https://source.unsplash.com/1200x800/?marble,tray",
-    "short": "El yapımı küçük sunum tepsisi.",
+    "short": "El yapımı küçük sunum tepsisi — kahve, atıştırmalıklar için ideal.",
     "material": "Mermer",
     "size": "30x20 cm",
-    "price": "相談"
+    "price": "Fiyat için iletişime geçin"
   },
   {
     "id": "mermer-sabunluk",
     "title": "Mermer Sabunluk",
     "image": "https://source.unsplash.com/1200x800/?soap,dish,marble",
-    "short": "Minimal tasarımlı sabunluk.",
+    "short": "Minimal tasarımlı sabunluk — banyo ve lavabo için şık bir dokunuş.",
     "material": "Mermer",
     "size": "12x8 cm",
-    "price": "相談"
+    "price": "Fiyat için iletişime geçin"
   },
   {
     "id": "kucuk-dekoratif-tepsi",
     "title": "Küçük Dekoratif Tepsi",
     "image": "https://source.unsplash.com/1200x800/?decorative,marble,plate",
-    "short": "Takı veya anahtar için dekoratif tepsi.",
+    "short": "Takı, anahtar veya küçük objeler için dekoratif tepsi.",
     "material": "Mermer",
     "size": "18x12 cm",
-    "price": "相談"
+    "price": "Fiyat için iletişime geçin"
   }
 ]
-<script>
-fetch('products.json').then(r=>r.json()).then(d=>window._products=d);
-</script>
