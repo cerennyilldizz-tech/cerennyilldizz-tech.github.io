@@ -53,4 +53,40 @@
     "size": "18x12 cm",
     "price": "Fiyat için iletişime geçin"
   }
+{
+  "id": "mermer-kesme-tahtasi",
+  "title": "Mermer Kesme Tahtası",
+  "image": "https://images.unsplash.com/photo-1543132220-4fd2abcb0f0a?auto=format&fit=crop&w=1200&q=80",
+  "short": "Şık ve dayanıklı mermer kesme tahtası, mutfak ve sunum için ideal.",
+  "material": "Mermer",
+  "size": "40x25 cm",
+  "price": "Fiyat için iletişime geçin"
+},
+{
+  "id": "ayakli-sunumluk",
+  "title": "Ayaklı Sunumluk",
+  "image": "https://images.unsplash.com/photo-1547592166-338f8edd2961?auto=format&fit=crop&w=1200&q=80",
+  "short": "Özel ayaklı sunumluk, peynir ve atıştırmalıklar için elegant sunum.",
+  "material": "Mermer + Ahşap",
+  "size": "35x18 cm",
+  "price": "Fiyat için iletişime geçin"
+},
+{
+  "id": "ayakli-sehpa-ustu-mermer",
+  "title": "Ayaklı Sehpa Üstü Mermer",
+  "image": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1200&q=80",
+  "short": "Ayaklı sehpa üstü mermer plaka, dekoratif ve fonksiyonel kullanım.",
+  "material": "Mermer",
+  "size": "45x30 cm",
+  "price": "Fiyat için iletişime geçin"
+},
+{
+  "id": "mermer-orta-sehpa",
+  "title": "Mermer Orta Sehpa",
+  "image": "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80",
+  "short": "Modern tasarım mermer orta sehpa, salonlara değer katar.",
+  "material": "Mermer",
+  "size": "90x50 cm",
+  "price": "Fiyat için iletişime geçin"
+}
 ]
