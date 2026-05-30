@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ürün Detayı</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand"><h1><a href="./">MermerPark</a></h1></div>
+      <nav class="nav-links"><a href="./#urunler">Ürünler</a><a href="./#iletisim">İletişim</a><a href="./cart.html">Sepet</a></nav>
+    </div>
+  </header>
+
+  <main class="container" id="productRoot" style="padding:2.5rem 0"></main>
+
+  <script>
+    async function loadProduct() {
+      const params = new URLSearchParams(location.search);
+      const id = params.get('id');
+      if (!id) {
+        document.getElementById('productRoot').innerText = 'Ürün bulunamadı.';
+        return;
+      }
+      const res = await fetch('products.json');
+      const products = await res.json();
+      const p = products.find(x => x.id === id);
+      if (!p) {
+        document.getElementById('productRoot').innerText = 'Ürün bulunamadı.';
+        return;
+      }
+      document.title = p.title + ' - MermerPark';
+      document.getElementById('productRoot').innerHTML = `
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:start;">
+          <div>
+            <img src="${p.image}" alt="${p.title}" style="width:100%;border-radius:14px;box-shadow:0 20px 50px rgba(0,0,0,0.12);"/>
+          </div>
+          <div>
+            <h2 style="margin-top:0">${p.title}</h2>
+            <p style="color:var(--muted)">${p.short}</p>
+            <p><strong>Malzeme:</strong> ${p.material}</p>
+            <p><strong>Boyut:</strong> ${p.size}</p>
+            <p><strong>Fiyat:</strong> ${p.price}</p>
+            <label style="display:block;margin:0.6rem 0">Adet
+              <input id="qty" type="number" value="1" min="1" style="width:80px;margin-left:0.5rem;padding:0.4rem;border-radius:6px;border:1px solid #ddd"/>
+            </label>
+            <div style="display:flex;gap:0.6rem;margin-top:1rem">
+              <button id="addCart" class="button">Sepete Ekle</button>
+              <a class="button" href="mailto:info@mermerpark.com?subject=Teklif%20Talebi%20-${encodeURIComponent(p.title)}" style="background:#555">Teklif İste</a>
+            </div>
+            <div id="msg" style="margin-top:0.8rem;color:var(--accent)"></div>
+          </div>
+        </div>
+      `;
+      document.getElementById('addCart').addEventListener('click', () => {
+        const qty = parseInt(document.getElementById('qty').value) || 1;
+        const cart = JSON.parse(localStorage.getItem('mp_cart') || '[]');
+        const existing = cart.find(i => i.id === p.id);
+        if (existing) existing.qty += qty; else cart.push({id:p.id, title:p.title, price:p.price, image:p.image, qty});
+        localStorage.setItem('mp_cart', JSON.stringify(cart));
+        document.getElementById('msg').innerText = 'Sepete eklendi.';
+      });
+    }
+    loadProduct();
+  </script>
+</body>
+</html>
